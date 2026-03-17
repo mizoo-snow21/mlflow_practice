@@ -19,13 +19,13 @@ MODEL_ENDPOINT = "databricks-meta-llama-3-3-70b-instruct"
 EXPERIMENT_NAME = "/Shared/llmops-demo"
 
 # Databricks auth
-os.environ["DATABRICKS_CONFIG_PROFILE"] = "e2-demo-tokyo"
+os.environ.setdefault("DATABRICKS_CONFIG_PROFILE", "DEFAULT")
 
 import mlflow
 from openai import OpenAI
 from databricks.sdk import WorkspaceClient
 
-w = WorkspaceClient(profile="e2-demo-tokyo")
+w = WorkspaceClient(profile=os.environ.get("DATABRICKS_CONFIG_PROFILE", "DEFAULT"))
 host = w.config.host
 token = w.config.token
 
@@ -221,7 +221,7 @@ if __name__ == "__main__":
     print("=" * 60)
     print("Notebook 05: Production Monitoring - Local Verification")
     print("=" * 60)
-    print(f"  Profile:    e2-demo-tokyo")
+    print(f"  Profile:    {os.environ.get('DATABRICKS_CONFIG_PROFILE', 'DEFAULT')}")
     print(f"  Host:       {host}")
     print(f"  Experiment: {EXPERIMENT_NAME}")
     print(f"  Experiment ID: {EXPERIMENT_ID}")

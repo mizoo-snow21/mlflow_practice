@@ -98,8 +98,8 @@ try:
 except Exception:
     SQL_WAREHOUSE_ID = os.environ.get("SQL_WAREHOUSE_ID", "")
 if not SQL_WAREHOUSE_ID:
-    # e2-demo-tokyo の DBAcademy Warehouse
-    SQL_WAREHOUSE_ID = "bec52b183a4cfe2a"
+    # ご自身の SQL Warehouse ID を設定してください
+    SQL_WAREHOUSE_ID = "<your-sql-warehouse-id>"
     print(f"デフォルトの SQL Warehouse を使用: {SQL_WAREHOUSE_ID}")
 os.environ["MLFLOW_TRACING_SQL_WAREHOUSE_ID"] = SQL_WAREHOUSE_ID
 

@@ -1,0 +1,8 @@
+.env
+*.pem
+*.key
+.databrickscfg
+__pycache__/
+*.pyc
+.venv/
+uv.lock

@@ -14,8 +14,8 @@ import time
 import mlflow
 
 
-DEFAULT_PROFILE = "e2-demo-field-eng"
-DEFAULT_EXPERIMENT = "/Users/yukihiro.mizoguchi@databricks.com/customer-support-agent"
+DEFAULT_PROFILE = "DEFAULT"
+DEFAULT_EXPERIMENT = "/Shared/customer-support-agent"
 
 
 def configure_mlflow() -> str:

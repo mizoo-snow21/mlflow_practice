@@ -37,7 +37,7 @@ class TestContext:
 
 def build_test_context() -> TestContext:
     """Databricks 認証・MLflow 初期化を行い TestContext を返す。"""
-    profile = os.environ.get("DATABRICKS_CONFIG_PROFILE", "e2-demo-tokyo")
+    profile = os.environ.get("DATABRICKS_CONFIG_PROFILE", "DEFAULT")
     # MLflow は DATABRICKS_CONFIG_PROFILE 環境変数経由でプロファイルを参照する
     os.environ["DATABRICKS_CONFIG_PROFILE"] = profile
     workspace_client = WorkspaceClient(profile=profile)
