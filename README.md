@@ -7,3 +7,4 @@ MLflow勉強会で共有したdemo群
 | ディレクトリ | 内容 | 説明 |
 |---|---|---|
 | [llmops-demo](./llmops-demo/) | MLflow LLMOps デモ | Databricks + MLflow で LLM アプリの品質管理サイクル（トレーシング → 評価 → プロンプト最適化 → ジャッジアラインメント → 本番監視）を一気通貫で回すデモ |
+| [mlflow-mcp-trace-demo](./mlflow-mcp-trace-demo/) | MLflow MCP トレース調査デモ | MLflow MCP Server を利用し、Claude Code から自然言語で MLflow トレースを調査するデモ |

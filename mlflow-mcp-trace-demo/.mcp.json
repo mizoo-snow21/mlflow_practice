@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "mlflow-mcp": {
+      "command": "uv",
+      "args": ["run", "mlflow", "mcp", "run"],
+      "env": {
+        "MLFLOW_TRACKING_URI": "databricks",
+        "DATABRICKS_CONFIG_PROFILE": "e2-demo-field-eng"
+      }
+    }
+  }
+}
